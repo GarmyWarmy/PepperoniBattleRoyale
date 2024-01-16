@@ -1,0 +1,160 @@
+Projectiles: {
+	SandballProjectile.DisplayName: Sandball
+	SandballShot.DisplayName: Sandball Shot
+	BabyFlyingFish.DisplayName: Baby Flying Fish
+	HellfireRound.DisplayName: Hellfire Round
+	PoisonArrow.DisplayName: Poison Arrow
+	BleghBolt.DisplayName: Frigid Bolt
+	MoltenKunai.DisplayName: Molten Kunai
+	WebSpitFriendly.DisplayName: Web ball
+}
+
+Items: {
+	Sandball: {
+		DisplayName: Sandball
+		Tooltip: "'May cause enemies to cry'"
+	}
+
+	CryonicRing: {
+		DisplayName: Cryonic Ring
+		Tooltip: Increases attack speed by {0}%
+	}
+
+	FlorescentCape: {
+		DisplayName: Florescent Cape
+		Tooltip:
+			'''
+			Increases movement speed by {0}%
+			Increases jump height
+			'''
+	}
+
+	DesertAegis: {
+		DisplayName: Desert Aegis
+		Tooltip: Increases damage reduction by {0}%
+	}
+
+	FishBlaster: {
+		DisplayName: Fish Blaster
+		Tooltip:
+			'''
+			Three round burst
+			Deals double damage while submerged
+			'''
+	}
+
+	HellfireRound: {
+		DisplayName: Hellfire Round
+		Tooltip: Has a chance to light enemies on fire
+	}
+
+	PoisonArrow: {
+		DisplayName: Poison Arrow
+		Tooltip: Has a chance to poison enemies
+	}
+
+	FrigidStaff: {
+		DisplayName: Frigid Staff
+		Tooltip: "'Blegh'"
+	}
+
+	HeartOfTheForest: {
+		DisplayName: Heart Of The Forest
+		Tooltip:
+			'''
+			Increases max health by {0}
+			Increases life regeneration by {1}
+			'''
+	}
+
+	MoltenKunai: {
+		DisplayName: Molten Kunai
+		Tooltip: "'May cause thousand degree burns'"
+	}
+
+	CochinealShell: {
+		DisplayName: Cochineal Shell
+		Tooltip:
+			'''
+			Double tap down to enter a shell,
+			increasing life regeneration and defense
+			but slowing movement speed
+			'''
+	}
+
+	Blegh: {
+		DisplayName: Blegh
+		Tooltip: Gives everyone the headstart buff when held
+	}
+
+	Spiderpeater: {
+		DisplayName: Spiderpeater
+		Tooltip:
+			'''
+			Converts wooden arrows to poison arrows
+			Right click to shoot a web ball
+			'''
+	}
+
+	FlamingEye: {
+		DisplayName: Flaming Eye
+		Tooltip: 10% increased damage, reduces defense by 15%
+	}
+
+	FackYou: {
+		DisplayName: Fack You
+		Tooltip: ""
+	}
+}
+
+Buffs: {
+	Shelled: {
+		DisplayName: Shelled
+		Description: Beetle popcorn
+	}
+
+	Rotting: {
+		DisplayName: Rotting
+		Description: Decreased vitality
+	}
+
+	Haemorrhaging: {
+		DisplayName: Haemorrhaging
+		Description: You are bleeding heavily
+	}
+
+	SapphireBuff: {
+		DisplayName: Sapphire Buff
+		Description: Increased magic damage and regeneration
+	}
+
+	EmeraldBuff: {
+		DisplayName: Emerald Buff
+		Description: Increased movement speed
+	}
+
+	AmberBuff: {
+		DisplayName: Amber Buff
+		Description: Increased defense and damage reduction
+	}
+
+	DiamondBuff: {
+		DisplayName: Diamond Buff
+		Description: Increased damage and attack speed
+	}
+
+	RubyBuff: {
+		DisplayName: Ruby Buff
+		Description: Increased life regeneration
+	}
+
+	Grace: {
+		DisplayName: Grace
+		Description: PvP is disabled
+	}
+
+	Headstart: {
+		DisplayName: Headstart
+		Description: Increased mining and movement speed
+	}
+}
