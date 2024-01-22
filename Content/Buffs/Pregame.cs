@@ -4,17 +4,20 @@ using Terraria.ModLoader;
 
 namespace PepperoniBattleRoyale.Content.Buffs
 {
-    public class Headstart : ModBuff
+    public class Pregame : ModBuff
     {
         public override void SetStaticDefaults()
         {
             Main.debuff[Type] = true;
             BuffID.Sets.NurseCannotRemoveDebuff[Type] = true;
+            BuffID.Sets.TimeLeftDoesNotDecrease[Type] = true;
+            Main.buffNoSave[Type] = true;
+            Main.persistentBuff[Type] = true;
         }
         public override void Update(Player player, ref int buffIndex)
         {
-            player.pickSpeed *= 1.15f;
-            player.moveSpeed *= 1.10f;
+            player.statLife = player.statLifeMax2;
+            player.statDefense += 999;
         }
     }
 }

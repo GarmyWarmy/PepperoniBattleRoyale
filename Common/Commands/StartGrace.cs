@@ -5,20 +5,20 @@ using Terraria.DataStructures;
 using PepperoniBattleRoyale.Content.Buffs;
 using Terraria.Chat;
 using static PepperoniBattleRoyale.PepperoniBattleRoyalePlayer;
+using PepperoniBattleRoyale.Common;
 
 namespace PepperoniBattleRoyale.Common.Commands
 {
     public class StartGrace : ModCommand
     {
-        public override CommandType Type => CommandType.World;
+        public override CommandType Type => CommandType.Server;
         public override string Command => "grace";
         public override string Usage
             => "/grace <seconds>";
         public override string Description => "Initiates grace period";
         public override void Action(CommandCaller caller, string input, string[] args)
         {
-            Player player = caller.Player;
-            if (IsPlayerLocalServerOwner(player.whoAmI))
+            if (IsPlayerLocalServerOwner(caller.Player.whoAmI))
             {
                 if (args.Length == 0)
                 {
@@ -30,7 +30,16 @@ namespace PepperoniBattleRoyale.Common.Commands
                     throw new UsageException(args[0] + " is not a correct integer value");
                 }
 
+                ModContent.GetInstance<GameStatePlayer>().graceTime = seconds * 60;
+                ModContent.GetInstance<GameStatePlayer>().totalPlayers = 0;
                 for (int i = 0; i < Main.maxPlayers; i++)
+                {
+                    if (Main.player[i].active)
+                    {
+                        ModContent.GetInstance<GameStatePlayer>().totalPlayers++;
+                    }
+                }
+                /*for (int i = 0; i < Main.maxPlayers; i++)
                 {
                     if (Main.player[i].active)
                         Main.player[i].AddBuff(ModContent.BuffType<Grace>(), seconds * 60);
@@ -38,9 +47,8 @@ namespace PepperoniBattleRoyale.Common.Commands
                     {
                         NetMessage.SendData(MessageID.AddPlayerBuff);
                     }
-                }
+                }*/
             }
-            else throw new UsageException("Only the host may use this command");
         }
         public static bool IsPlayerLocalServerOwner(int whoAmI)
         {

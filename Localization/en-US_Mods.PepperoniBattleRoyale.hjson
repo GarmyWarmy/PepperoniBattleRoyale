@@ -157,4 +157,9 @@ Buffs: {
 		DisplayName: Headstart
 		Description: Increased mining and movement speed
 	}
+
+	Pregame: {
+		DisplayName: Pregame
+		Description: Now you won't die in the spawnbox, noob
+	}
 }

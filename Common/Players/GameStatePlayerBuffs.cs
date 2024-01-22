@@ -4,12 +4,12 @@ using Terraria.ModLoader;
 
 namespace PepperoniBattleRoyale.Common.Players
 {
-    public class RottingDebuffPlayer : ModPlayer
+    public class GameStatePlayerBuffs : ModPlayer
     {
-        public bool rottingDebuff;
+        public bool pregameBuff;
         public override void ResetEffects()
         {
-            rottingDebuff = false;
+            pregameBuff = false;
         }
     }
 }
